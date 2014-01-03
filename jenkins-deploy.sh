@@ -2,6 +2,8 @@
 
 echo Start deploy
 
+git pull
+
 echo Kill old
 pkill haywire_hello_w
 
