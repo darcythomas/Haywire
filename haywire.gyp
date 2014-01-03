@@ -163,7 +163,7 @@
           'src/samples/hello_world/program.c',
         ],
 		'libraries': [ 
-			'-l<mono-2',
+			'-l</include/mono-2.0',
 		],		
         'copies': [
         {
