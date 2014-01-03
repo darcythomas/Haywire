@@ -162,12 +162,9 @@
         'sources': [
           'src/samples/hello_world/program.c',
         ],
-
-		
-		'libraries': [
-			'!@(pkg-config --cflags --libs mono-2)',
-		],
-		
+		'libraries': [ 
+			'-l<mono-2',
+		],		
         'copies': [
         {
           'destination': '<(PRODUCT_DIR)',
