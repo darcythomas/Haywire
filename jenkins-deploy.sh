@@ -3,9 +3,9 @@
 
 echo Start deploy
 
+./haywire.sh stop
 
-pkill haywire_hello_w
 
-( ./builds/unix/debug/haywire_hello_world &)
+./haywire.sh stop
 
 echo done
