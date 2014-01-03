@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "haywire.h"
+#include <time.h>
 
 #define CRLF "\r\n"
 
@@ -26,7 +27,15 @@ void get_root(http_request* request, hw_http_response* response, void* user_data
     SETSTRING(content_type_value, "text/html");
     hw_set_response_header(response, &content_type_name, &content_type_value);
     
-    SETSTRING(body, "hello world");
+
+	time_t result = time(NULL);
+
+	char* time = asctime(localtime(&result));
+
+	char responseBody[100] = "hello world ";
+	strcat(responseBody, time);
+	
+	SETSTRING(body, responseBody);
     hw_set_body(response, &body);
     
     if (request->keep_alive)
@@ -46,6 +55,8 @@ void get_root(http_request* request, hw_http_response* response, void* user_data
 
 int main(int args, char** argsv)
 {
+	
+	
     char route[] = "/";
     configuration config;
     config.http_listen_address = "0.0.0.0";
@@ -62,5 +73,7 @@ int main(int args, char** argsv)
     hw_init_with_config(&config);
     hw_http_add_route(route, get_root, NULL);
     hw_http_open(3);
+
+	
     return 0;
 }
