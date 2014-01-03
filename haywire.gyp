@@ -152,8 +152,7 @@
         'msvs_guid': '5ECEC9E5-8F23-47B6-93E0-C3B328B3BE66',
 
         'dependencies': [
-          'haywire',
-		   'mono-2',
+          'haywire',		   
         ],
         
         'include_dirs': [
@@ -164,6 +163,10 @@
           'src/samples/hello_world/program.c',
         ],
 
+		,
+		'libraries': [
+			'!@(pkg-config --cflags --libs mono-2)',
+		
         'copies': [
         {
           'destination': '<(PRODUCT_DIR)',
