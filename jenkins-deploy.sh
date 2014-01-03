@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 echo Start deploy
 
 echo Kill old
