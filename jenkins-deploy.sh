@@ -9,6 +9,6 @@ echo Start deploy
 
 pkill haywire_hello_w
 
-( $PWD/builds/unix/debug/haywire_hello_world & ) disown
+( $PWD/builds/unix/debug/haywire_hello_world & ) 
 
 echo done
