@@ -31,7 +31,7 @@ void get_root(http_request* request, hw_http_response* response, void* user_data
 	time_t result = time(NULL);
 	char* time = asctime(localtime(&result));
 
-	char responseBody[100] = "hello worldx ";
+	char responseBody[100] = "hello world ";
 	strcat(responseBody, time);
 	
 	SETSTRING(body, responseBody);
