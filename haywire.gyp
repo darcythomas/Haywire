@@ -153,6 +153,7 @@
 
         'dependencies': [
           'haywire',
+		   'mono-2',
         ],
         
         'include_dirs': [
