@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Owin">
+      <HintPath>packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,9 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HatwireIAppBuilder.cs" />
     <Compile Include="HaywireInterop.cs" />
     <Compile Include="HaywireResponse.cs" />
     <Compile Include="HaywireServer.cs" />
+    <Compile Include="HaywireServerService.cs" />
     <Compile Include="HaywireWebApp.cs" />
     <Compile Include="PinnedObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -51,6 +56,9 @@
       <Link>haywire.dll</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
