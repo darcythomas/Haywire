@@ -26,10 +26,12 @@ Default/
 Debug/
 *.sln
 *.vcxproj
+*.suo
 bin/
 lib/
 .vs/
 builds/
 obj/
 
+#keep this .sln file
 !src/haywire.net/haywire-net.sln
