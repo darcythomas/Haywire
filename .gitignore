@@ -30,3 +30,4 @@ bin/
 lib/
 .vs/
 builds/
+obj/
