@@ -42,6 +42,7 @@
     <Compile Include="HaywireInterop.cs" />
     <Compile Include="HaywireResponse.cs" />
     <Compile Include="HaywireServer.cs" />
+    <Compile Include="HaywireWebApp.cs" />
     <Compile Include="PinnedObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

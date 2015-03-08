@@ -31,3 +31,5 @@ lib/
 .vs/
 builds/
 obj/
+
+!src/haywire.net/haywire-net.sln
