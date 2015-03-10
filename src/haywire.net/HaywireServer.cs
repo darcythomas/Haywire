@@ -21,5 +21,10 @@ namespace haywire
         {
             HaywireInterop.Open(0);
         }
+
+        public void Shutdown()
+        {
+            //throw new NotImplementedException();
+        }
     }
 }

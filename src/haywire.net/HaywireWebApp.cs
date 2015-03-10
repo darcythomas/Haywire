@@ -9,7 +9,7 @@ namespace haywire
    public static class HaywireWebApp
     {
 
-        private static HaywireRequestCallback rootCallback;
+        
 
         public static IDisposable Start(String url, Action<IAppBuilder> startup)
         {
@@ -25,17 +25,8 @@ namespace haywire
 
         public static IDisposable Start(Uri url, Action<IAppBuilder> startup)
         {
-            HaywireConfiguration config;
-            config.ListenAddress = url.Host;
 
-          
-                config.ListenPort = url.Port;
-          
-
-            var server = new HaywireServer(config);
-            rootCallback = new HaywireRequestCallback(GetRoot);
-            server.AddRoute("/", rootCallback);
-            server.StartAcceptingRequests();
+           
 
             throw new NotImplementedException();
         }
