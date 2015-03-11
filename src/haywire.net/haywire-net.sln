@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.22609.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "haywire-net", "haywire-net.csproj", "{74CD59BF-57D0-42F0-8E6D-AA784B984536}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "..\ConsoleApplication\ConsoleApplication.csproj", "{26CD8F23-2DDE-44C9-A136-201CD03E083F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{74CD59BF-57D0-42F0-8E6D-AA784B984536}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74CD59BF-57D0-42F0-8E6D-AA784B984536}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74CD59BF-57D0-42F0-8E6D-AA784B984536}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26CD8F23-2DDE-44C9-A136-201CD03E083F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26CD8F23-2DDE-44C9-A136-201CD03E083F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26CD8F23-2DDE-44C9-A136-201CD03E083F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26CD8F23-2DDE-44C9-A136-201CD03E083F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
