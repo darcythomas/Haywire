@@ -12,6 +12,11 @@ namespace haywire
             HaywireInterop.InitWithConfig(configuration);
         }
 
+        public DateTime Time()
+        {
+            return DateTime.UtcNow;
+        }
+
         public void AddRoute(string route, HaywireRequestCallback callback)
         {
             HaywireInterop.AddRoute(route, callback);

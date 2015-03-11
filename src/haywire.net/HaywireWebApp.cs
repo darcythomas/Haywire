@@ -6,12 +6,12 @@ using System.Text;
 
 namespace haywire
 {
-   public static class HaywireWebApp
+   public  class HaywireWebApp
     {
 
         
 
-        public static IDisposable Start(String url, Action<IAppBuilder> startup)
+        public  IDisposable Start(String url, Action<IAppBuilder> startup)
         {
             Uri cleanUri;
 
@@ -26,25 +26,23 @@ namespace haywire
         public static IDisposable Start(Uri url, Action<IAppBuilder> startup)
         {
 
-           
-
-            throw new NotImplementedException();
+            return new HaywireServerService(url, startup);
         }
 
-        private static void GetRoot(HaywireRequest request, IntPtr response, IntPtr state)
-        {
-            var resp = new HaywireResponse(response);
-            resp.SetCode(StatusCodes.HTTP_STATUS_200);
-            resp.SetHeader("Content-Type", "text/html");
-            resp.SetHeader("Connection", "Keep-Alive");
-            resp.SetHeader("foo", "bar");
-            resp.SetBody("hello world");
-            resp.Send(ResponseComplete);
-        }
+        //private static void GetRoot(HaywireRequest request, IntPtr response, IntPtr state)
+        //{
+        //    var resp = new HaywireResponse(response);
+        //    resp.SetCode(StatusCodes.HTTP_STATUS_200);
+        //    resp.SetHeader("Content-Type", "text/html");
+        //    resp.SetHeader("Connection", "Keep-Alive");
+        //    resp.SetHeader("foo", "bar");
+        //    resp.SetBody("hello world");
+        //    resp.Send(ResponseComplete);
+        //}
 
-        private static void ResponseComplete(IntPtr state)
-        {
+        //private static void ResponseComplete(IntPtr state)
+        //{
 
-        }
+        //}
     }
 }
