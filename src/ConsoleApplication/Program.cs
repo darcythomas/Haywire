@@ -16,7 +16,8 @@ namespace ConsoleApplication
             string url = "http://localhost:8080";
 
             HaywireWebApp app = new HaywireWebApp();
-            using (var q = app.Start(url, builder => builder.xyz()))
+           // using (var q = app.Start(url, builder => builder.xyz()))
+            using (var q = app.Start(url, builder => builder.UseFileServer(enableDirectoryBrowsing: true)     ))
             {
                 Debug.WriteLine("hi");
                 Console.ReadKey();
